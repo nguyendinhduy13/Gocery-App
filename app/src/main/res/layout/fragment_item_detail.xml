@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".feature.customer.product.view.ItemDetailFragment">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNavigateUp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/sliderView"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNavigateUp"
+            android:layout_height="220dp">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/circleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_height="30dp"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/itemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/item_name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sliderView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/_12_8_kg"
+            android:textColor="@color/black"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/itemNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/itemNameTextView" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/_12_8_kg"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+        <TextView
+            android:id="@+id/salePriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/_1_8_kg"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/priceTextView"
+            app:layout_constraintTop_toTopOf="@+id/priceTextView" />
+
+        <TextView
+            android:id="@+id/salePercentTextView"
+            android:layout_width="33dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/sale_percent_textview_background"
+            android:text="@string/_99"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/sliderView"
+            app:layout_constraintTop_toTopOf="@+id/itemNameTextView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray_very_light"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+
+        <TextView
+            android:id="@+id/howManyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/how_many_do_you_want_to_buy"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMinusCount"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/minus"
+            app:layout_constraintBottom_toBottomOf="@+id/howManyTextView"
+            app:layout_constraintEnd_toStartOf="@+id/textViewQuantity"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/howManyTextView"
+            app:layout_constraintTop_toTopOf="@+id/howManyTextView" />
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/howManyTextView"
+            app:layout_constraintEnd_toStartOf="@+id/btnMinusCount"
+            app:layout_constraintStart_toEndOf="@+id/btnAddCount"
+            app:layout_constraintTop_toTopOf="@+id/howManyTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddCount"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/plus"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/howManyTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewQuantity"
+            app:layout_constraintTop_toTopOf="@+id/howManyTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bthAddToCart"
+            style="@style/BottomButton"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/cart"
+            app:layout_constraintBottom_toBottomOf="@+id/bthBuyNow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bthBuyNow" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bthBuyNow"
+            style="@style/BottomButton"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="32dp"
+            android:text="Buy now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

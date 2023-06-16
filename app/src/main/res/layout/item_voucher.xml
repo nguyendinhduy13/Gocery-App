@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginVertical="@dimen/margin_medium"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:id="@+id/item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textview_decoration_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/gradient_linear_blue"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/placeholder_voucher_value_big"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/textview_value"
+                style="@style/Grocer.BodyTextMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_voucher_value" />
+
+            <TextView
+                android:id="@+id/textview_dateExpired"
+                style="@style/Grocer.LabelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text="@string/placeholder_voucher_expire" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_use"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_margin="@dimen/margin_extra_small"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/button_text_voucher_use"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:cornerRadius="4dp"
+            app:strokeColor="@color/green_bright"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboarding">
+    <fragment
+        android:id="@+id/register"
+        android:name="com.mobiledevelopment.feature.authentication.fragment.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_onBoardingCT"
+            app:destination="@id/onBoardingCT" />
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <action
+        android:id="@+id/action_onboarding_to_onBoardingCT"
+        app:destination="@id/onBoardingCT" />
+    <fragment
+        android:id="@+id/forgot_Password"
+        android:name="com.mobiledevelopment.feature.authentication.fragment.Forgot_Password"
+        android:label="fragment_forgot__password"
+        tools:layout="@layout/fragment_forgot__password">
+        <action
+            android:id="@+id/action_forgot_Password_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingCT"
+        android:name="com.mobiledevelopment.feature.authentication.fragment.OnBoardingCT"
+        android:label="fragment_on_boarding_ct"
+        tools:layout="@layout/fragment_on_boarding_ct">
+        <action
+            android:id="@+id/action_onBoardingCT_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_onBoardingCT_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_onBoardingCT_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_onBoardingCT_to_register"
+        app:destination="@id/register" />
+    <action
+        android:id="@+id/action_forgot_Password_to_login"
+        app:destination="@id/login" />
+    <action
+        android:id="@+id/action_onboarding_to_register"
+        app:destination="@id/register" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.mobiledevelopment.feature.authentication.fragment.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_onBoardingCT"
+            app:destination="@id/onBoardingCT" />
+        <action
+            android:id="@+id/action_login_to_forgot_Password"
+            app:destination="@id/forgot_Password" />
+        <action
+            android:id="@+id/action_login_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_onBoardingCT_to_shopFragment"
+        app:destination="@id/shopFragment" />
+    <action
+        android:id="@+id/action_login_to_onBoardingCT"
+        app:destination="@id/onBoardingCT" />
+    <action
+        android:id="@+id/action_onBoardingCT_to_login"
+        app:destination="@id/login" />
+    <fragment
+        android:id="@+id/onboarding"
+        android:name="com.mobiledevelopment.feature.authentication.fragment.Onboarding"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboarding_to_onBoardingCT"
+            app:destination="@id/onBoardingCT" />
+        <action
+            android:id="@+id/action_onboarding_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <action
+        android:id="@+id/action_register_to_onBoardingCT"
+        app:destination="@id/onBoardingCT" />
+    <action
+        android:id="@+id/action_login_to_shopFragment"
+        app:destination="@id/shopFragment" />
+    <action
+        android:id="@+id/action_register_to_login"
+        app:destination="@id/login" />
+    <action
+        android:id="@+id/action_login_to_forgot_Password"
+        app:destination="@id/forgot_Password" />
+</navigation>

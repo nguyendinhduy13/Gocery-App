@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.admin.product.AddProductFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fff">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/myToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/arrow_back"
+                    app:tint="@color/button_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Add Voucher"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/valueVoucher"
+        style="@style/TextInputLayoutOutlined"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtValueVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDescription"
+        style="@style/TextInputLayoutOutlined"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/valueExpire"
+        style="@style/TextInputLayoutOutlined"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="wrap_content"
+        android:hint="Date Expired">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDateExpired"
+            android:enabled="false"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btn_DateExpire"
+            android:layout_width="30dp"
+            app:layout_constraintWidth_percent="0.4"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:tint="@color/button_color"
+            android:src="@drawable/calendar"
+            />
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUser"
+        style="@style/TextInputLayoutOutlined"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Description">
+    <Spinner
+        android:id="@+id/email_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/spinner_border"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnAddVoucher"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Voucher"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

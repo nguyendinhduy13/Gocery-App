@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="TextInputLayoutOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/Grocer.BodyTextMedium</item>
+        <item name="android:singleLine">true</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="errorEnabled">true</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/margin_extra_small</item>
+    </style>
+
+    <style name="TextInputLayoutOutlined2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/Grocer.BodyTextMedium</item>
+        <item name="android:singleLine">true</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="TextInputLayoutDropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/Grocer.BodyTextMedium</item>
+        <item name="android:inputType">none</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="errorEnabled">true</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/margin_small</item>
+    </style>
+
+    <style name="ProgressBar">
+        <item name="android:layout_width">@dimen/image_size_large</item>
+        <item name="android:layout_height">@dimen/image_size_large</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="BottomButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_corner_green_filled</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:textAppearance">@style/Grocer.ButtonTextPrimary</item>
+        <item name="android:layout_gravity">bottom|center</item>
+    </style>
+
+    <style name="BottomButton2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_corner_white</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:textAppearance">@style/Grocer.ButtonTextPrimary</item>
+        <item name="android:layout_gravity">bottom|center</item>
+    </style>
+
+    <style name="ImageButton">
+        <item name="android:layout_width">@dimen/image_size_large_icon</item>
+        <item name="android:layout_height">@dimen/image_size_large_icon</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="tint">@color/green_bright</item>
+    </style>
+
+    <style name="RightChevronImageButton">
+        <item name="android:layout_width">@dimen/image_size_medium_icon</item>
+        <item name="android:layout_height">@dimen/image_size_medium_icon</item>
+        <item name="android:contentDescription">@string/image_description_chevron</item>
+        <item name="android:src">@drawable/ic_chevron_right_black_24dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="tint">@color/green_bright</item>
+    </style>
+
+    <style name="TextOnlyButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAppearance">@style/Grocer.BodyTextMedium</item>
+        <item name="android:paddingVertical" tools:targetApi="o">@dimen/padding_small</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">@dimen/padding_small</item>
+        <item name="tint">@color/green_bright</item>
+    </style>
+
+    <style name="TextWithIconButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textAppearance">@style/Grocer.ButtonTextPrimary</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">@dimen/margin_extra_small
+        </item>
+        <item name="drawableTint">@color/white</item>
+        <item name="iconSize">@dimen/image_size_small_icon</item>
+    </style>
+
+    <style name="CircleImageView">
+        <item name="android:layout_width">@dimen/image_size_default</item>
+        <item name="android:layout_height">@dimen/image_size_default</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeCircle</item>
+    </style>
+
+    <style name="RoundedCornerImageView">
+        <item name="android:layout_width">@dimen/image_size_default</item>
+        <item name="android:layout_height">@dimen/image_size_default</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeRoundedCornerRectangle</item>
+    </style>
+
+    <style name="ImageCategory">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeRoundedCornerRectangle</item>
+    </style>
+
+    <style name="ImageCategory2">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeRoundedCornerRectangle</item>
+    </style>
+
+    <style name="ShapeCircle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeRoundedCornerRectangle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+    </style>
+</resources>

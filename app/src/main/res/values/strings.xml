@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">MobileDevelopment</string>
+
+    <string-array name="genders">
+        <item>Female</item>
+        <item>Male</item>
+        <item>Other</item>
+    </string-array>
+
+    <!--    PROFILE    -->
+    <string name="placeholder_username">Username</string>
+    <string name="placeholder_email">Email</string>
+    <string name="button_text_profile_edit">Edit Profile</string>
+    <string name="button_text_profile_logout">Logout</string>
+    <string name="image_description_chevron">A right arrow</string>
+    <string name="title_profile_vouchers">Vouchers</string>
+    <string name="subtitle_profile_vouchers">View Your Vouchers</string>
+    <string name="title_profile_promos">Promos</string>
+    <string name="subtitle_profile_promos">Latest Promos from us</string>
+    <string name="title_profile_address">Address</string>
+    <string name="subtitle_profile_address">Your Addresses</string>
+
+    <!--    EDIT PROFILE    -->
+    <string name="title_edit_profile_email">Email</string>
+    <string name="title_edit_profile_name">Name</string>
+    <string name="title_edit_profile_gender">Gender</string>
+    <string name="title_edit_profile_phone">Phone Number</string>
+    <string name="image_description_camera">Camera</string>
+    <string name="button_text_edit_profile_save">Save</string>
+
+    <!--    USER ADDRESS   -->
+    <string name="placeholder_user_address_address">Address</string>
+    <string name="placeholder_user_address_address_detail">Address detail</string>
+    <string name="title_user_address_primary">Primary</string>
+    <string name="menu_text_user_address_add">ADD</string>
+
+    <!--    EDIT ADDRESS   -->
+    <string name="title_edit_address_label">Label</string>
+    <string name="title_edit_address_detail">Address Detail</string>
+    <string name="title_edit_address_set_primary">Set as primary</string>
+    <string name="placeholder_voucher_value">Value</string>
+    <string name="placeholder_voucher_expire">Expired Date</string>
+    <string name="placeholder_voucher_value_big">25%</string>
+    <string name="button_text_voucher_use">Use</string>
+    <string name="subtitle_voucher_detail_description">Description</string>
+    <string name="subtitle_voucher_detail_expired_date">Expired date</string>
+    <string name="button_text_voucher_detail_close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">994579011505045</string>
+    <string name="fb_login_protocol_scheme">fb994579011505045</string>
+    <string name="facebook_client_token">b5f0d3edf9abe59ca43e9e039223e8b8</string>
+    <string name="action_shop">Shop</string>
+    <string name="action_cart">Cart</string>
+    <string name="action_my_order">My order</string>
+    <string name="action_profile">Account</string>
+    <string name="submit">Submit</string>
+    <string name="highest_price">Highest Price</string>
+    <string name="lowest_price">Lowest Price</string>
+    <string name="popularity">Popularity</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="item_name">Item Name</string>
+    <string name="_12_8_kg">12.8$/kg</string>
+    <string name="_1_8_kg">1.8$/kg</string>
+    <string name="_99">99%</string>
+    <string name="how_many_do_you_want_to_buy">How many do you want to buy?</string>
+    <string name="_2">2</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="_300">300$</string>
+    <string name="_32_34">32.34$</string>
+    <string name="checkout">Checkout</string>
+
+    <string name="title_activity_admin">AdminActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_statistic">Statistic</string>
+    <string name="header_statistic">Statistics</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_bar_title_order">My Order</string>
+    <string name="item_order_title_id">Order ID</string>
+    <string name="item_order_title_address">Delivered to</string>
+    <string name="item_order_title_total_payment">Total payment</string>
+    <string name="title_edit_address_street">Street</string>
+    <string name="title_edit_address_province">Province</string>
+    <string name="title_edit_address_district">District</string>
+    <string name="title_edit_address_ward">Ward</string>
+    <string name="transaction">Transaction</string>
+</resources>

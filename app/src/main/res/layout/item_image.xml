@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:id="@+id/wrapper"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgCategory"
+        style="@style/ImageCategory"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/btnRemoveImage"
+        android:layout_gravity="right"
+        android:background="@drawable/bg_ic_close"
+        android:layout_width="20dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/ic_close"
+        android:layout_height="20dp"/>
+
+</FrameLayout>

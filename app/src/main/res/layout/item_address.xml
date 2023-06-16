@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_outer_frame"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/image_size_default"
+    android:background="@drawable/border_all_thin_green"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_extra_medium">
+
+        <TextView
+            android:id="@+id/textview_label"
+            style="@style/Grocer.BodyTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_user_address_address" />
+
+        <TextView
+            android:id="@+id/textview_address_detail"
+            style="@style/Grocer.LabelSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/placeholder_user_address_address_detail" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_primary_indicator"
+        style="@style/Grocer.UnclickableIndicatorButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/rounded_corner_green_filled"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingHorizontal="@dimen/padding_small"
+        android:paddingVertical="@dimen/padding_extra_small"
+        android:text="@string/title_user_address_primary" />
+
+</FrameLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StandardRootLayout"
+    tools:context=".feature.customer.profile.ProfileFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageview_avatar"
+        style="@style/CircleImageView"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textview_username"
+        style="@style/Grocer.TitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:gravity="center_horizontal"
+        android:text="@string/placeholder_username" />
+
+    <TextView
+        android:id="@+id/textview_email"
+        style="@style/Grocer.SubTitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:gravity="center_horizontal"
+        android:text="@string/placeholder_email" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_edit_profile"
+        style="@style/TextWithIconButton"
+        android:text="@string/button_text_profile_edit"
+        app:icon="@drawable/ic_edit_black_24dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_profile_address"
+        style="@style/SpanningClickableLayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/Grocer.TitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_profile_address" />
+
+            <TextView
+                style="@style/Grocer.SubTitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_profile_address" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/button_address"
+            style="@style/RightChevronImageButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_profile_vouchers"
+        style="@style/SpanningClickableLayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_profile_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/Grocer.TitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_profile_vouchers" />
+
+            <TextView
+                style="@style/Grocer.SubTitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_profile_vouchers" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/button_profile_settings"
+            style="@style/RightChevronImageButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_profile_promos"
+        style="@style/SpanningClickableLayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_promos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/Grocer.TitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_profile_promos" />
+
+            <TextView
+                style="@style/Grocer.SubTitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_profile_promos" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/button_promos"
+            style="@style/RightChevronImageButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textview_logout"
+        style="@style/TextOnlyButton"
+        android:text="@string/button_text_profile_logout" />
+</LinearLayout>

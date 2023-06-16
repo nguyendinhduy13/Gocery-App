@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/StandardRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="0dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_voucher_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_very_very_light"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/subtitle_voucher_detail_expired_date"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textview_dateExpired"
+            style="@style/Grocer.BodyTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/padding_small"
+        android:text="@string/subtitle_voucher_detail_description"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textview_description"
+        style="@style/Grocer.BodyTextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/gray_very_very_light"
+        android:padding="@dimen/padding_small"
+        android:singleLine="false"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_close"
+        style="@style/BottomButton"
+        android:layout_marginHorizontal="@dimen/margin_small"
+        android:text="@string/button_text_voucher_detail_close" />
+</LinearLayout>
+

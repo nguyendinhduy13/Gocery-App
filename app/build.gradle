@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mobiledevelopment"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "VN_ADDRESS_BASE_URL", '"https://provinces.open-api.vn/api/"'
+            buildConfigField "String", "SEND_NOTIFICATION_BASE_URL", '"https://fcm.googleapis.com/fcm/"'
+        }
+
+        release {
+            buildConfigField "String", "VN_ADDRESS_BASE_URL", '"https://provinces.open-api.vn/api/"'
+            buildConfigField "String", "SEND_NOTIFICATION_BASE_URL", '"https://fcm.googleapis.com/fcm/"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding {
+        enable true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation("com.squareup.okhttp3:okhttp:4.6.0")
+    implementation("commons-codec:commons-codec:1.14")
+    //def libraryDir = file("$rootDir/Gocery/app/src/main/libs") implementation fileTree(dir: libraryDir, include: ['*.aar', '*.jar'], exclude: [])
+    implementation fileTree(dir: '/Users/quochung/Gocery/app/src/main/libs', include: ['*.aar', '*.jar'], exclude: [])
+    def activity_version = "1.6.1"
+    def nav_version = "2.5.3"
+
+    // Java language implementation
+    implementation "androidx.activity:activity:$activity_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+    implementation 'com.google.firebase:firebase-firestore:24.4.4'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+
+    //Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
+
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    //Validators (Email, Phone number)
+    implementation 'commons-validator:commons-validator:1.5.1'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.13.7'
+
+    // SplashScreen
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
+    //Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    // uit toast
+    implementation 'io.github.thang-uit:toastperfectlibrary:1.0.1'
+
+    // ted picker used to pick multi images
+    implementation 'gun0912.ted:tedbottompicker:2.0.1'
+    implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
+
+    // circle indicator
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    // Retrofit with convert
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // firebase cloud messaging
+    implementation 'com.google.firebase:firebase-messaging:23.0.3'
+}
+
+configurations.implementation {
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+}

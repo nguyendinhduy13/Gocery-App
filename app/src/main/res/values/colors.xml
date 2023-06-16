@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_bright">#08C25E</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray_medium">#666666</color>
+    <color name="gray_light">#999999</color>
+    <color name="gray_very_light">#EBEBEB</color>
+    <color name="gray_very_very_light">#FBFBFB</color>
+    <color name="gray_background">#F5F5F5</color>
+
+    <color name="blue_light">#56CCF2</color>
+    <color name="blue_heavy">#2F80ED</color>
+    <color name="orange_light">#FFB75E</color>
+    <color name="orange_heavy">#ED8F03</color>
+    <color name="red_light">#E06056</color>
+    <color name="red_heavy">#CB2D3E</color>
+
+    <!--    ORDER STATUS   -->
+    <color name="cancelled_text">#FF3030</color>
+    <color name="waiting_payment_text">#FFB930</color>
+    <color name="in_progress_text">#3086FF</color>
+    <color name="completed_text">#08C25E</color>
+
+    <color name="cancelled_background">#FFE5E5</color>
+    <color name="waiting_payment_background">#FFF3E5</color>
+    <color name="in_progress_background">#E5F2FF</color>
+    <color name="completed_background">#EDFFE5</color>
+
+    <color name="red">#ff494d</color>
+    <color name="button_color">#08C25E</color>
+    <color name="line_5_percent">#eeeeee</color>
+    <color name="color_edit_text">#cdcccc</color>
+    <color name="color_icon_tab">#D9D9D9</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="waiting_color">#FFFF00</color>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StandardRootLayout"
+    tools:context=".feature.customer.profile.edit.EditProfileFragment">
+
+    <FrameLayout
+        android:id="@+id/whole_layout_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/button_add_avatar"
+            style="@style/ImageButton"
+            android:layout_gravity="top|end"
+            android:contentDescription="@string/image_description_camera"
+            android:src="@drawable/ic_camera_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageview_avatar"
+                style="@style/RoundedCornerImageView"
+                android:src="@drawable/ic_launcher_background" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayout_email"
+                style="@style/TextInputLayoutOutlined"
+                android:hint="@string/title_edit_profile_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayout_name"
+                style="@style/TextInputLayoutOutlined"
+                android:hint="@string/title_edit_profile_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutDropdown"
+                android:hint="@string/title_edit_profile_gender">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edittext_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayout_phone"
+                style="@style/TextInputLayoutOutlined"
+                android:hint="@string/title_edit_profile_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_save"
+            style="@style/BottomButton"
+            android:text="@string/button_text_edit_profile_save" />
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/ProgressBar" />
+
+</FrameLayout>

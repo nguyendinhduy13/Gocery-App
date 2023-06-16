@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/wrapper"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgProduct"
+        style="@style/ImageCategory2"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Product Name"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Product quantity/pack"
+        android:textColor="#979797"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/black"
+        android:text="$5.00"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/txtDiscountPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="$1.00"
+        android:textSize="17dp"
+        android:textColor="#FFB930"
+        />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnFinished"
+        android:title="Completed"
+        />
+    <item
+        android:id="@+id/btnInProgress"
+        android:title="In Progress"
+        />
+    <item
+        android:id="@+id/btnCancelled"
+        android:title="Cancelled"
+        />
+</menu>

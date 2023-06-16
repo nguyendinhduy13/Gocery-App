@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sorting_product_bottom_background">
+
+    <TextView
+        android:id="@+id/filterTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:textColor="@color/black"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lowTextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="0-50000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/lowCheck"
+        app:layout_constraintStart_toStartOf="@+id/filterTextview"
+        app:layout_constraintTop_toTopOf="@+id/filterTextview" />
+
+    <ImageView
+        android:id="@+id/lowCheck"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="invisible"
+        android:src="@drawable/shape"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lowTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lowTextview" />
+
+    <TextView
+        android:id="@+id/mediumTextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="50000-150000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/mediumCheck"
+        app:layout_constraintStart_toStartOf="@+id/lowTextview"
+        app:layout_constraintTop_toTopOf="@+id/lowTextview" />
+
+    <ImageView
+        android:id="@+id/mediumCheck"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/shape"
+        android:visibility="invisible"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mediumTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mediumTextview" />
+
+    <TextView
+        android:id="@+id/highTextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text=">150000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/highCheck"
+        app:layout_constraintStart_toStartOf="@+id/mediumTextview"
+        app:layout_constraintTop_toTopOf="@+id/mediumTextview" />
+
+    <ImageView
+        android:id="@+id/highCheck"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/shape"
+        android:layout_marginEnd="24dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/highTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/highTextview" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/submit"
+        style="@style/BottomButton"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highTextview" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_category">
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="com.mobiledevelopment.feature.admin.category.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_navigation_category_to_addCategoryFragment"
+            app:destination="@id/addCategoryFragment" />
+        <action
+            android:id="@+id/action_navigation_category_to_detailCategoryFragment"
+            app:destination="@id/detailCategoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.mobiledevelopment.feature.admin.ui.to_be_removed_one.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_transaction" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.mobiledevelopment.feature.admin.ui.to_be_removed_two.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_addVoucherFragment"
+            app:destination="@id/addVoucherFragment" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/navigation_statistic"
+        android:name="com.mobiledevelopment.feature.admin.ui.statistic.StatisticFragment"
+        android:label="fragment_statistic"
+        tools:layout="@layout/fragment_statistic" >
+        <action
+            android:id="@+id/action_navigation_statistic_to_navigation_chart_month"
+            app:destination="@id/navigation_chart_month" />
+        <action
+            android:id="@+id/action_navigation_statistic_to_navigation_chart_day"
+            app:destination="@id/navigation_chart_day" />
+        <action
+            android:id="@+id/action_navigation_statistic_to_navigatiton_chart_year"
+            app:destination="@id/navigatiton_chart_year" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_chart_day"
+        android:name="com.mobiledevelopment.feature.admin.ui.statistic.chart.ChartDayFragment"
+        android:label="fragment_chart_day"
+        tools:layout="@layout/fragment_chart_day" >
+        <action
+            android:id="@+id/action_navigation_chart_day_to_navigation_statistic"
+            app:destination="@id/navigation_statistic" />
+        <argument
+            android:name="data_chart_day"
+            app:argType="com.mobiledevelopment.core.models.Order[]" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_chart_month"
+        android:name="com.mobiledevelopment.feature.admin.ui.statistic.chart.chartMonthFragment"
+        android:label="fragment_chart_month"
+        tools:layout="@layout/fragment_chart_month" >
+
+        <action
+            android:id="@+id/action_navigation_chart_month_to_navigation_statistic"
+            app:destination="@id/navigation_statistic" />
+        <argument
+            android:name="data_chart_month"
+            app:argType="com.mobiledevelopment.core.models.Order[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigatiton_chart_year"
+        android:name="com.mobiledevelopment.feature.admin.ui.statistic.chart.chartYearFragment"
+        android:label="fragment_chart_year"
+        tools:layout="@layout/fragment_chart_year" >
+        <action
+            android:id="@+id/action_navigatiton_chart_year_to_navigation_statistic"
+            app:destination="@id/navigation_statistic" />
+        <argument
+            android:name="data_chart_year"
+            app:argType="com.mobiledevelopment.core.models.Order[]" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoryFragment"
+        android:name="com.mobiledevelopment.feature.admin.category.AddCategoryFragment"
+        android:label="fragment_add_category"
+        tools:layout="@layout/fragment_add_category" />
+    <fragment
+        android:id="@+id/detailCategoryFragment"
+        android:name="com.mobiledevelopment.feature.admin.category.DetailCategoryFragment"
+        android:label="fragment_detail_category"
+        tools:layout="@layout/fragment_detail_category" >
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_editCategoryFragment"
+            app:destination="@id/editCategoryFragment" />
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCategoryFragment"
+        android:name="com.mobiledevelopment.feature.admin.category.EditCategoryFragment"
+        android:label="fragment_edit_category"
+        tools:layout="@layout/fragment_edit_category" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.mobiledevelopment.feature.admin.product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.mobiledevelopment.feature.admin.product.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.mobiledevelopment.feature.admin.product.DetailProductFragment"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" >
+        <action
+            android:id="@+id/action_detailProductFragment_to_editProductFragment"
+            app:destination="@id/editProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProductFragment"
+        android:name="com.mobiledevelopment.feature.admin.product.EditProductFragment"
+        android:label="fragment_edit_product"
+        tools:layout="@layout/fragment_edit_product" />
+    <fragment
+        android:id="@+id/addVoucherFragment"
+        android:name="com.mobiledevelopment.feature.admin.voucher.AddVoucherFragment"
+        android:label="AddVoucherFragment" />
+</navigation>
